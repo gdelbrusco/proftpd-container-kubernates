@@ -12,5 +12,6 @@ EXPOSE 21
 
 COPY entrypoint.sh /
 
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["proftpd", "-n"]
