@@ -25,7 +25,8 @@ Now you have to copy the content of ftpd.passwd inside the authuserfile configma
 The last file is group and this file configure the group (or multiple groups) of all user that you want to add to belong.
 
 Define ConfigMap from file
-with this command (command line interface) you can define a ConfigMap from file
+with this command (command line interface) you can define a ConfigMap from file.
+
 `kubectl create configmap hidden.conf --from-file=/path/of/file`
 
 
