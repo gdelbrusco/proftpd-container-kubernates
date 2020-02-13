@@ -8,6 +8,7 @@ This is an image docker for use proftpd inside kubernetes enviroment.
 
 
 **ConfigMap for kubernetes**
+
 Inside folder ConfigMap we have put 3 configmap that is usefull inside kubernetes in our config
 The first file hidden.conf extend config of proftpd.
 For detail of the istruction you can read the Doc of proftpd
