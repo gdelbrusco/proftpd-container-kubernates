@@ -7,9 +7,14 @@ RUN     	apt update && \
             rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN sed -i -e '/UseIPv6/ s/on/off/' /etc/proftpd/proftpd.conf
-RUN echo "Include /configfile/" >> /etc/proftpd/proftpd.conf
-RUN mkdir /etc/proftpd/authuserfile
-RUN mkdir /etc/proftpd/group
+#RUN echo "Include /configfile/" >> /etc/proftpd/proftpd.conf
+#RUN mkdir /etc/proftpd/authuserfile
+#RUN mkdir /etc/proftpd/group
+COPY group /etc/proftpd/
+COPY authuserfile /etc/proftpd/
+COPY hidden.con /etc/proftpd/conf.d
+
+RUN chmod 640 /etc/proftpd/group && chmod 640 /etc/proftpd/authuserfile
 
 EXPOSE 21
 
