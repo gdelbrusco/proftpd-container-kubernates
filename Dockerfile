@@ -12,7 +12,7 @@ RUN sed -i -e '/UseIPv6/ s/on/off/' /etc/proftpd/proftpd.conf
 #RUN mkdir /etc/proftpd/group
 COPY group /etc/proftpd/
 COPY authuserfile /etc/proftpd/
-COPY hidden.con /etc/proftpd/conf.d
+COPY hidden.conf /etc/proftpd/conf.d
 
 RUN chmod 640 /etc/proftpd/group && chmod 640 /etc/proftpd/authuserfile
 
