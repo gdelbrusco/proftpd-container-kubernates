@@ -7,6 +7,7 @@ RUN     	apt update && \
             rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN sed -i -e '/UseIPv6/ s/on/off/' /etc/proftpd/proftpd.conf
+RUN echo "Include /configfile/ >> /etc/proftpd/proftpd.conf"
 RUN mkdir /etc/proftpd/authuserfile
 RUN mkdir /etc/proftpd/group
 
