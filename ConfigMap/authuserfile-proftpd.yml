@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  authuserfile: |
+    ftpguest:VdQm/1tmKGhlo:2001:2001::/home/ftpguest:/bin/bash
+kind: ConfigMap
+metadata:
+  name: authuserfile
