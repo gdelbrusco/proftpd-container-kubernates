@@ -31,6 +31,7 @@ Define ConfigMap from file
 with this command (command line interface) you can define a ConfigMap from file.
 
 `kubectl create configmap hidden.conf --from-file=/path/of/file`
+or you can use kubectl apply -f configmapname.yml
 
 
 
