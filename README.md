@@ -5,6 +5,8 @@ Proftpd image for kubernetes
 
 This is an image docker for use proftpd inside kubernetes enviroment.
 
+**Now is in fast build and config for testing porpouse**
+
 
 
 **ConfigMap for kubernetes**
