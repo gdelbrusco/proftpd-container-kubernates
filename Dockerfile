@@ -13,7 +13,7 @@ RUN echo "Include /configfile/" >> /etc/proftpd/proftpd.conf
 
 COPY group /etc/proftpd/
 COPY authuserfile /etc/proftpd/
-COPY hidden.conf /etc/proftpd/conf.d
+#COPY hidden.conf /etc/proftpd/conf.d
 
 RUN chmod 640 /etc/proftpd/group && chmod 640 /etc/proftpd/authuserfile
 
