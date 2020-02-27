@@ -7,6 +7,7 @@ RUN     	apt update && \
             rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN sed -i -e '/UseIPv6/ s/on/off/' /etc/proftpd/proftpd.conf
+RUN sed -i -e '/Port/ s/21/8021/' /etc/proftpd/proftpd.conf
 RUN echo "Include /configfile/" >> /etc/proftpd/proftpd.conf
 #RUN mkdir /etc/proftpd/authuserfile
 #RUN mkdir /etc/proftpd/group
@@ -17,7 +18,7 @@ COPY authuserfile /etc/proftpd/
 
 RUN chmod 640 /etc/proftpd/group && chmod 640 /etc/proftpd/authuserfile
 
-EXPOSE 21
+EXPOSE 8021
 
 COPY entrypoint.sh /
 
