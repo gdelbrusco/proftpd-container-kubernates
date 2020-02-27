@@ -39,4 +39,5 @@ or you can use kubectl apply -f configmapname.yml
 
 
 **Note:**
+Default port on 8021 (Dockerfile set the port)
 IPv6 is Disabled, if you want to enable it remove the sed command from Dockerfile.
